@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>EnovaMaker — Delfim Leite</title>
 <meta name="description" content="NixOS modules for digital sovereignty, and engineering work in IoT, industrial monitoring and energy. Delfim Leite, Porto, Portugal.">
-<link rel="icon" href="Logo1b.jpg">
+<link rel="icon" href="avatar.png">
 <style>
   :root {
     --navy:   #16386b;
@@ -37,13 +37,19 @@
   }
   .wrap { max-width: 46rem; margin: 0 auto; padding: 3.5rem 1.5rem 5rem; }
 
-  /* The logo is a photograph of signage, so it carries its own light
-     background. Rounding and bordering it makes that read as a plaque
-     rather than as a stray rectangle -- including in dark mode, where a
-     light panel is a deliberate object and a light seam is a mistake. */
   .logo {
-    display: block; width: 100%; max-width: 26rem; height: auto;
-    border: 1px solid var(--line); border-radius: 7px; margin-bottom: 2.25rem;
+    display: block; width: 100%; max-width: 25rem; height: auto;
+    margin-bottom: 2.25rem;
+  }
+  /* The wordmark is navy and the tagline is smaller navy still, so on a dark
+     ground it stops being legible. Sitting it on a white card in dark mode
+     keeps the brand colours as drawn instead of inventing a second version
+     of the logo that nobody approved. */
+  @media (prefers-color-scheme: dark) {
+    .logo {
+      background: #fff; padding: 1rem 1.15rem;
+      border-radius: 8px; box-sizing: border-box; max-width: 26rem;
+    }
   }
 
   h2 {
@@ -102,7 +108,7 @@
 <div class="wrap">
 
   <header>
-    <img class="logo" src="Logo1.JPG" width="1098" height="344"
+    <img class="logo" src="logo.png" width="984" height="276"
          alt="EnovaMaker — Innovation, Fabrication, Creation">
 
     <p class="lede">
