@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>EnovaMaker — Delfim Leite</title>
 <meta name="description" content="NixOS modules for digital sovereignty, and engineering work in IoT, industrial monitoring and energy. Delfim Leite, Porto, Portugal.">
+<link rel="icon" href="Logo1b.jpg">
 <style>
   :root {
     --navy:   #16386b;
@@ -36,15 +37,13 @@
   }
   .wrap { max-width: 46rem; margin: 0 auto; padding: 3.5rem 1.5rem 5rem; }
 
-  /* wordmark, drawn rather than loaded */
-  .mark { display: flex; align-items: center; gap: .75rem; margin-bottom: .35rem; }
-  .mark svg { flex: none; width: 44px; height: 44px; }
-  .name { font-size: 2rem; font-weight: 700; letter-spacing: -.02em; line-height: 1; }
-  .name .a { color: var(--navy); }
-  .name .b { color: var(--orange); }
-  .tag {
-    font-size: .72rem; font-weight: 600; letter-spacing: .13em;
-    text-transform: uppercase; color: var(--muted); margin: 0 0 2.5rem 3.6rem;
+  /* The logo is a photograph of signage, so it carries its own light
+     background. Rounding and bordering it makes that read as a plaque
+     rather than as a stray rectangle -- including in dark mode, where a
+     light panel is a deliberate object and a light seam is a mistake. */
+  .logo {
+    display: block; width: 100%; max-width: 26rem; height: auto;
+    border: 1px solid var(--line); border-radius: 7px; margin-bottom: 2.25rem;
   }
 
   h2 {
@@ -103,19 +102,8 @@
 <div class="wrap">
 
   <header>
-    <div class="mark">
-      <svg viewBox="0 0 48 48" aria-hidden="true">
-        <g fill="none" stroke="var(--navy)" stroke-width="3.2" stroke-linecap="round">
-          <circle cx="22" cy="26" r="12"/>
-          <path d="M22 8v5M8.6 15.5l4.3 2.5M35.4 15.5l-4.3 2.5"/>
-        </g>
-        <path d="M14 34 L36 12" stroke="var(--orange)" stroke-width="3.6" stroke-linecap="round"/>
-        <path d="M27 12h9v9" fill="none" stroke="var(--orange)" stroke-width="3.6"
-              stroke-linecap="round" stroke-linejoin="round"/>
-      </svg>
-      <div class="name"><span class="a">Enova</span><span class="b">Maker</span></div>
-    </div>
-    <p class="tag">Inovação · Fabricação · Criação</p>
+    <img class="logo" src="Logo1.JPG" width="1098" height="344"
+         alt="EnovaMaker — Innovation, Fabrication, Creation">
 
     <p class="lede">
       I'm <strong>Delfim Leite</strong>, an engineer in Porto, Portugal. I work under the name
