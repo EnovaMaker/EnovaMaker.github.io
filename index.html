@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>EnovaMaker — Delfim Leite</title>
+<meta name="description" content="NixOS modules for digital sovereignty, and engineering work in IoT, industrial monitoring and energy. Delfim Leite, Porto, Portugal.">
+<style>
+  :root {
+    --navy:   #16386b;
+    --orange: #f26a1b;
+    --ink:    #1a1d21;
+    --muted:  #5c646e;
+    --line:   #e2e5ea;
+    --bg:     #ffffff;
+    --panel:  #f7f8fa;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --navy:   #7ba7e8;
+      --orange: #ff8b3d;
+      --ink:    #e8eaed;
+      --muted:  #9aa3ae;
+      --line:   #2b3038;
+      --bg:     #14171b;
+      --panel:  #1b1f24;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    -webkit-text-size-adjust: 100%;
+  }
+  .wrap { max-width: 46rem; margin: 0 auto; padding: 3.5rem 1.5rem 5rem; }
+
+  /* wordmark, drawn rather than loaded */
+  .mark { display: flex; align-items: center; gap: .75rem; margin-bottom: .35rem; }
+  .mark svg { flex: none; width: 44px; height: 44px; }
+  .name { font-size: 2rem; font-weight: 700; letter-spacing: -.02em; line-height: 1; }
+  .name .a { color: var(--navy); }
+  .name .b { color: var(--orange); }
+  .tag {
+    font-size: .72rem; font-weight: 600; letter-spacing: .13em;
+    text-transform: uppercase; color: var(--muted); margin: 0 0 2.5rem 3.6rem;
+  }
+
+  h2 {
+    font-size: .78rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase;
+    color: var(--muted); margin: 3rem 0 1rem; padding-bottom: .5rem;
+    border-bottom: 1px solid var(--line);
+  }
+  p { margin: 0 0 1rem; }
+  .lede { font-size: 1.12rem; color: var(--ink); }
+  a { color: var(--navy); text-decoration-thickness: 1px; text-underline-offset: 2px; }
+  a:hover { color: var(--orange); }
+
+  ul.work { list-style: none; padding: 0; margin: 0; }
+  ul.work li { padding: .8rem 0; border-bottom: 1px solid var(--line); }
+  ul.work li:last-child { border-bottom: 0; }
+  .row { display: flex; flex-wrap: wrap; align-items: baseline; gap: .5rem; }
+  .row a { font-weight: 600; }
+  .desc { color: var(--muted); font-size: .93rem; margin-top: .15rem; }
+
+  .badge {
+    font-size: .68rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase;
+    padding: .12rem .45rem; border-radius: 3px; white-space: nowrap;
+  }
+  .live   { background: color-mix(in srgb, var(--orange) 16%, transparent); color: var(--orange); }
+  .design { background: var(--panel); color: var(--muted); border: 1px solid var(--line); }
+
+  .areas { display: flex; flex-wrap: wrap; gap: .4rem; padding: 0; list-style: none; margin: 0; }
+  .areas li {
+    font-size: .87rem; padding: .3rem .65rem;
+    background: var(--panel); border: 1px solid var(--line); border-radius: 4px;
+  }
+
+  footer {
+    margin-top: 3.5rem; padding-top: 1.25rem; border-top: 1px solid var(--line);
+    font-size: .87rem; color: var(--muted);
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <div class="mark">
+      <svg viewBox="0 0 48 48" aria-hidden="true">
+        <g fill="none" stroke="var(--navy)" stroke-width="3.2" stroke-linecap="round">
+          <circle cx="22" cy="26" r="12"/>
+          <path d="M22 8v5M8.6 15.5l4.3 2.5M35.4 15.5l-4.3 2.5"/>
+        </g>
+        <path d="M14 34 L36 12" stroke="var(--orange)" stroke-width="3.6" stroke-linecap="round"/>
+        <path d="M27 12h9v9" fill="none" stroke="var(--orange)" stroke-width="3.6"
+              stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <div class="name"><span class="a">Enova</span><span class="b">Maker</span></div>
+    </div>
+    <p class="tag">Inovação · Fabricação · Criação</p>
+
+    <p class="lede">
+      I'm <strong>Delfim Leite</strong>, an engineer in Porto, Portugal. I work under the name
+      EnovaMaker. Most of what I publish is infrastructure people are supposed to be able to
+      run themselves — declaratively, reproducibly, and without trusting me to keep a service up.
+    </p>
+  </header>
+
+  <h2>Open source</h2>
+
+  <p>
+    NixOS modules for digital sovereignty: censorship-resistant networking, self-hosting,
+    supply-chain provenance, and payments. All MIT-licensed. Two ship working code today;
+    the rest are published designs with their architecture and roadmap in the open.
+  </p>
+
+  <ul class="work">
+    <li>
+      <div class="row">
+        <a href="https://github.com/EnovaMaker/nixos-webtunnel-bridge">nixos-webtunnel-bridge</a>
+        <span class="badge live">working</span>
+      </div>
+      <div class="desc">
+        A Tor WebTunnel bridge relay from one declaration — Tor, the transport, nginx with TLS
+        and a cover site. Two-node VM test in CI.
+      </div>
+    </li>
+    <li>
+      <div class="row">
+        <a href="https://github.com/EnovaMaker/nixos-tor-anti-dos">nixos-tor-anti-dos</a>
+        <span class="badge live">working</span>
+      </div>
+      <div class="desc">
+        Per-source rate limiting for a Tor relay's ORPort. Picks up what the unlicensed,
+        unmaintained <code>tor-ddos</code> left behind.
+      </div>
+    </li>
+    <li>
+      <div class="row">
+        <a href="https://github.com/EnovaMaker/nixos-sovereign-host">nixos-sovereign-host</a>
+        <span class="badge design">design</span>
+      </div>
+      <div class="desc">
+        Community self-hosting: Matrix with bridges, Syncthing, monitoring, backup and SSO.
+      </div>
+    </li>
+    <li>
+      <div class="row">
+        <a href="https://github.com/EnovaMaker/nixos-sovereign-host-censorship">nixos-sovereign-host-censorship</a>
+        <span class="badge design">design</span>
+      </div>
+      <div class="desc">
+        Onion services, an obfs4 bridge, metadata hardening and a one-flag lockdown mode.
+      </div>
+    </li>
+    <li>
+      <div class="row">
+        <a href="https://github.com/EnovaMaker/nixos-provenance-guard">nixos-provenance-guard</a>
+        <span class="badge design">design</span>
+      </div>
+      <div class="desc">
+        Checks that a new flake-input revision is a legitimate continuation of its history,
+        not a repository takeover.
+      </div>
+    </li>
+    <li>
+      <div class="row">
+        <a href="https://github.com/EnovaMaker/nixos-local-first">nixos-local-first</a>
+        <span class="badge design">design</span>
+      </div>
+      <div class="desc">
+        Self-hosting the NextGraph end-to-end-encrypted local-first stack.
+      </div>
+    </li>
+    <li>
+      <div class="row">
+        <a href="https://github.com/EnovaMaker/nixos-taler">nixos-taler</a>
+        <span class="badge design">design</span>
+      </div>
+      <div class="desc">
+        Production operations for GNU Taler: auditor role, typed AML/KYC options, TLS,
+        encrypted backups and systemd sandboxing.
+      </div>
+    </li>
+    <li>
+      <div class="row">
+        <a href="https://github.com/EnovaMaker/nixos-iot-edge">nixos-iot-edge</a>
+        <span class="badge design">design</span>
+      </div>
+      <div class="desc">
+        Declarative IoT ingestion: an MQTT broker, a time-series store and a query API.
+      </div>
+    </li>
+  </ul>
+
+  <h2>Engineering</h2>
+
+  <p>
+    Alongside the open source work, the areas I take on commercially:
+  </p>
+
+  <ul class="areas">
+    <li>Industrial IoT &amp; data acquisition</li>
+    <li>Predictive maintenance</li>
+    <li>Building energy monitoring</li>
+    <li>V2G &amp; bidirectional charging</li>
+    <li>Embedded firmware (ESP32, NixOS)</li>
+    <li>Machine learning, applied</li>
+  </ul>
+
+  <h2>Contact</h2>
+
+  <p>
+    <a href="mailto:enovamaker@gmail.com">enovamaker@gmail.com</a> ·
+    <a href="https://github.com/EnovaMaker">github.com/EnovaMaker</a>
+  </p>
+
+  <footer>
+    EnovaMaker is the name Delfim Leite works under; it is not yet an incorporated company.
+    <br>
+    This page loads no scripts, no fonts and no third-party resources. Nothing here tracks you.
+  </footer>
+
+</div>
+</body>
+</html>
