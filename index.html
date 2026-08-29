@@ -41,14 +41,14 @@
     display: block; width: 100%; max-width: 25rem; height: auto;
     margin-bottom: 2.25rem;
   }
-  /* The wordmark is navy and the tagline is smaller navy still, so on a dark
-     ground it stops being legible. Sitting it on a white card in dark mode
-     keeps the brand colours as drawn instead of inventing a second version
-     of the logo that nobody approved. */
+  /* "Enova" and the tagline are navy, so on a dark ground they stop being
+     legible. A white card in dark mode keeps the brand colours as drawn
+     rather than inventing a second logo nobody approved, and it also hides
+     the faint light fringe the cut-out leaves along the letters. */
   @media (prefers-color-scheme: dark) {
     .logo {
       background: #fff; padding: 1rem 1.15rem;
-      border-radius: 8px; box-sizing: border-box; max-width: 26rem;
+      border-radius: 8px; max-width: 26rem;
     }
   }
 
@@ -108,7 +108,7 @@
 <div class="wrap">
 
   <header>
-    <img class="logo" src="logo.png" width="984" height="276"
+    <img class="logo" src="logo.png" width="988" height="282"
          alt="EnovaMaker — Innovation, Fabrication, Creation">
 
     <p class="lede">
