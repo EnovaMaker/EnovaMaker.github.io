@@ -77,6 +77,22 @@
     background: var(--panel); border: 1px solid var(--line); border-radius: 4px;
   }
 
+  .email { margin-bottom: 1.25rem; }
+  .email a {
+    display: inline-block; font-size: 1.15rem; font-weight: 700;
+    padding: .6rem 1rem; border: 1px solid var(--line); border-radius: 5px;
+    background: var(--panel); text-decoration: none; color: var(--navy);
+  }
+  .email a:hover { border-color: var(--orange); color: var(--orange); }
+
+  ul.topics { list-style: none; padding: 0; margin: 0 0 1.25rem; }
+  ul.topics li { padding: .55rem 0; border-bottom: 1px solid var(--line); }
+  ul.topics li:last-child { border-bottom: 0; }
+  ul.topics a { font-weight: 600; }
+  ul.topics span { display: block; color: var(--muted); font-size: .9rem; }
+
+  .fineprint { font-size: .9rem; color: var(--muted); }
+
   footer {
     margin-top: 3.5rem; padding-top: 1.25rem; border-top: 1px solid var(--line);
     font-size: .87rem; color: var(--muted);
@@ -212,8 +228,33 @@
 
   <h2>Contact</h2>
 
-  <p>
-    <a href="mailto:enovamaker@gmail.com">enovamaker@gmail.com</a> ·
+  <p class="email">
+    <a href="mailto:enovamaker@gmail.com">enovamaker@gmail.com</a>
+  </p>
+
+  <p>Write about anything below, or just write. These only fill in a subject line.</p>
+
+  <ul class="topics">
+    <li>
+      <a href="mailto:enovamaker@gmail.com?subject=Question%20about%20a%20NixOS%20module">
+        A question about a module</a>
+      <span>How to deploy one, whether it fits what you are running.</span>
+    </li>
+    <li>
+      <a href="mailto:enovamaker@gmail.com?subject=Engineering%20enquiry">
+        Engineering work</a>
+      <span>Industrial monitoring, IoT, energy, embedded. Say what the problem is.</span>
+    </li>
+    <li>
+      <a href="mailto:enovamaker@gmail.com?subject=Collaboration%20or%20funding">
+        Collaboration or funding</a>
+      <span>Partnerships, grant consortia, sponsoring the maintenance work.</span>
+    </li>
+  </ul>
+
+  <p class="fineprint">
+    Something broken in a module is better as an issue on the repository than as an email — the
+    answer helps whoever hits it next.
     <a href="https://github.com/EnovaMaker">github.com/EnovaMaker</a>
   </p>
 
