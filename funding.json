@@ -1,0 +1,92 @@
+{
+  "version": "v1.0.0",
+  "entity": {
+    "type": "individual",
+    "role": "maintainer",
+    "name": "EnovaMaker",
+    "email": "enovamaker@gmail.com",
+    "description": "Declarative NixOS modules for self-hosting, Tor circumvention infrastructure and supply-chain verification.",
+    "webpageUrl": {
+      "url": "https://enovamaker.com"
+    }
+  },
+  "projects": [
+    {
+      "guid": "nixos-webtunnel-bridge",
+      "name": "nixos-webtunnel-bridge",
+      "description": "Deploy a Tor WebTunnel bridge relay on NixOS from a single declaration: Tor, the webtunnel transport, nginx with TLS, and a cover site. Working module with a NixOS VM test, CI green.",
+      "webpageUrl": { "url": "https://github.com/EnovaMaker/nixos-webtunnel-bridge" },
+      "repositoryUrl": { "url": "https://github.com/EnovaMaker/nixos-webtunnel-bridge" },
+      "licenses": ["spdx:MIT"],
+      "tags": ["nixos", "tor", "censorship-circumvention", "bridge", "webtunnel"]
+    },
+    {
+      "guid": "nixos-tor-anti-dos",
+      "name": "nixos-tor-anti-dos",
+      "description": "Per-source rate limiting for a Tor relay's ORPort, declared once on NixOS: nftables with a dynamic set per address family. Working module, two-node VM test, CI.",
+      "webpageUrl": { "url": "https://github.com/EnovaMaker/nixos-tor-anti-dos" },
+      "repositoryUrl": { "url": "https://github.com/EnovaMaker/nixos-tor-anti-dos" },
+      "licenses": ["spdx:MIT"],
+      "tags": ["nixos", "tor", "nftables", "rate-limiting", "security"]
+    },
+    {
+      "guid": "nixos-provenance-guard",
+      "name": "nixos-provenance-guard",
+      "description": "Update-time provenance verification and supply-chain risk scoring for Nix flakes: checks that a new flake-input revision is a legitimate history continuation, and scores each input's health. Design preview.",
+      "webpageUrl": { "url": "https://github.com/EnovaMaker/nixos-provenance-guard" },
+      "repositoryUrl": { "url": "https://github.com/EnovaMaker/nixos-provenance-guard" },
+      "licenses": ["spdx:MIT"],
+      "tags": ["nixos", "supply-chain-security", "provenance", "nix-flakes"]
+    },
+    {
+      "guid": "nixos-sovereign-host",
+      "name": "nixos-sovereign-host",
+      "description": "Declarative self-sovereign hosting for communities: Matrix with bridges, Syncthing, monitoring, backup and SSO composed from a single NixOS flake. Design preview.",
+      "webpageUrl": { "url": "https://github.com/EnovaMaker/nixos-sovereign-host" },
+      "repositoryUrl": { "url": "https://github.com/EnovaMaker/nixos-sovereign-host" },
+      "licenses": ["spdx:MIT"],
+      "tags": ["nixos", "self-hosting", "matrix", "sso"]
+    },
+    {
+      "guid": "nixos-sovereign-host-censorship",
+      "name": "nixos-sovereign-host-censorship",
+      "description": "Censorship-resilience layer for nixos-sovereign-host: declarative Tor onion services, an obfs4 bridge relay, metadata hardening and a one-flag lockdown mode. Design preview.",
+      "webpageUrl": { "url": "https://github.com/EnovaMaker/nixos-sovereign-host-censorship" },
+      "repositoryUrl": { "url": "https://github.com/EnovaMaker/nixos-sovereign-host-censorship" },
+      "licenses": ["spdx:MIT"],
+      "tags": ["nixos", "tor", "onion-services", "censorship-circumvention"]
+    },
+    {
+      "guid": "nixos-taler",
+      "name": "nixos-taler",
+      "description": "Production-operations layer for GNU Taler on NixOS: adds an auditor role, typed AML/KYC options, TLS/ACME, encrypted backups, secrets management and systemd sandboxing on top of the nixpkgs module. Design preview.",
+      "webpageUrl": { "url": "https://github.com/EnovaMaker/nixos-taler" },
+      "repositoryUrl": { "url": "https://github.com/EnovaMaker/nixos-taler" },
+      "licenses": ["spdx:MIT"],
+      "tags": ["nixos", "gnu-taler", "payments"]
+    },
+    {
+      "guid": "nixos-local-first",
+      "name": "nixos-local-first",
+      "description": "Declarative self-hosting for the NextGraph encrypted local-first stack on NixOS: broker packaging, E2EE off-site backup, monitoring and an operator CLI. Design preview.",
+      "webpageUrl": { "url": "https://github.com/EnovaMaker/nixos-local-first" },
+      "repositoryUrl": { "url": "https://github.com/EnovaMaker/nixos-local-first" },
+      "licenses": ["spdx:MIT"],
+      "tags": ["nixos", "nextgraph", "local-first", "e2ee"]
+    },
+    {
+      "guid": "nixos-iot-edge",
+      "name": "nixos-iot-edge",
+      "description": "Declarative IoT data ingestion for NixOS: one services.iot-edge block wires up an MQTT broker, a time-series store (SQLite, InfluxDB or TimescaleDB) and a query API. Design preview.",
+      "webpageUrl": { "url": "https://github.com/EnovaMaker/nixos-iot-edge" },
+      "repositoryUrl": { "url": "https://github.com/EnovaMaker/nixos-iot-edge" },
+      "licenses": ["spdx:MIT"],
+      "tags": ["nixos", "iot", "mqtt", "time-series"]
+    }
+  ],
+  "funding": {
+    "channels": [],
+    "plans": [],
+    "history": []
+  }
+}
