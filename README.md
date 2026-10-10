@@ -39,7 +39,7 @@ This has already caught us once.
 |---|---|---|
 | `logo.png` | transparent | The web, anywhere you control the background |
 | `mark.png` | transparent | The same, symbol only |
-| `logo-white.png` | white, with margin | Word, PDF, slides, grant applications |
+| `logo-white.png` | white, with margin | Word, PDF, slides, documents |
 | `mark-white.png` | white, with margin | The same, symbol only |
 | `avatar.png` | white, 500×500 | GitHub profile picture |
 | `Logo1.JPG`, `Logo1b.jpg` | — | The originals. Untouched, keep them |
@@ -70,7 +70,7 @@ the logo sits on a white card in dark mode rather than floating on the dark grou
 
 ## Pointing the domains here
 
-**`enovamaker.com` is the primary.** The funders are international and it is the address that goes
+**`enovamaker.com` is the primary.** It is the address that goes
 in the repositories and on the sponsorship page.
 
 **The `.pt` cannot also be a custom domain.** A repository's `CNAME` file holds exactly one, so
@@ -133,8 +133,8 @@ Two names, two machines, no link between them.
 
 ## Things this page deliberately does not say
 
-**It does not call EnovaMaker a company.** It is not incorporated yet, and the grant applications
-are made by an individual. A page claiming otherwise contradicts them, and funders check.
+**It does not call EnovaMaker a company.** It is not incorporated yet, and the work is done by an
+individual. A page claiming otherwise would not be true.
 
 **It does not claim a professional title.** *Engenheiro* is protected in Portugal. The page says
 what the work is, not what the person is called.

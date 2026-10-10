@@ -14,7 +14,7 @@
     {
       "guid": "nixos-webtunnel-bridge",
       "name": "nixos-webtunnel-bridge",
-      "description": "Deploy a Tor WebTunnel bridge relay on NixOS from a single declaration: Tor, the webtunnel transport, nginx with TLS, and a cover site. Working module with a NixOS VM test, CI green.",
+      "description": "Deploy a Tor WebTunnel bridge relay on NixOS from a single declaration: Tor, the webtunnel transport, nginx with TLS, and a cover site. Prototype: its VM test checks that the parts are wired together; it does not yet prove a client completes a Tor circuit.",
       "webpageUrl": { "url": "https://github.com/EnovaMaker/nixos-webtunnel-bridge" },
       "repositoryUrl": { "url": "https://github.com/EnovaMaker/nixos-webtunnel-bridge" },
       "licenses": ["spdx:MIT"],
@@ -23,7 +23,7 @@
     {
       "guid": "nixos-tor-anti-dos",
       "name": "nixos-tor-anti-dos",
-      "description": "Per-source rate limiting for a Tor relay's ORPort, declared once on NixOS: nftables with a dynamic set per address family. Working module, two-node VM test, CI.",
+      "description": "Per-source rate limiting for a Tor relay's ORPort, declared once on NixOS: nftables with a dynamic set per address family. Working module with a two-node VM test; not production-tested.",
       "webpageUrl": { "url": "https://github.com/EnovaMaker/nixos-tor-anti-dos" },
       "repositoryUrl": { "url": "https://github.com/EnovaMaker/nixos-tor-anti-dos" },
       "licenses": ["spdx:MIT"],
